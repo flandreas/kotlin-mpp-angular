@@ -41,7 +41,7 @@ Or with an IntelliJ IDEA run configuration: Navigate in IntelliJ IDEA to ../ui/j
 
 In a console:
 ```
-cd ui/src/angular
+cd ui/js/src/angular
 ng serve --open
 ```
 
@@ -56,13 +56,8 @@ ng serve --open
 
 ## Open issues
 
-### node doesn't find custom modules
-
-The custom domain module as well as the Kotlin JS runtime libraries are assembled in the `node_modules` subdirectory
- of the build folder, where they are not found by `ng serve`, because it runs on its own local `node_modules` directory.
- 
-Current workaround: Symlinks from `ui/js/src/angular/node_modules` to `kotlin` and `techstack-domain` directories in
- the build folder.
+* Feature: Build a combined JAR with all Java classes and resources (non-fat JAR)
+* Bug: jvmJar contains Angular artifacts
 
 ## Future extensions
 
